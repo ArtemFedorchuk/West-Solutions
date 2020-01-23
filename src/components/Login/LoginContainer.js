@@ -17,11 +17,13 @@ import { reduxForm } from 'redux-form'
 //     // a unique name for the form
 //     form: 'login'
 // })(Login);
-
+function focusHandler() {
+    console.log('focusHandler')
+}
 
 const LoginContainer = (props) => {
     return  (
-        <Login />
+        <Login focusHandler={focusHandler}/>
     )
 };
 
