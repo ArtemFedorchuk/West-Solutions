@@ -1,9 +1,9 @@
 export default {
   INDEX: '/',
   LOGIN: '/login',
-  NEWS: '/news',
-  PROFILE: '/profile',
-  HOME: '/home',
+  NEWS: '/categories/news',
+  PROFILE: '/categories/profile',
+  HOME: '/categories/home',
   REGISTRATION: '/registration',
   CATEGORIES: '/categories',
 };

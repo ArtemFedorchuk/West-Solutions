@@ -8,8 +8,8 @@ import {
 } from '@material-ui/core';
 
 import SearchIcon from '@material-ui/icons/Search';
-import PeopleIcon from '@material-ui/icons/People';
-import SettingsIcon from '@material-ui/icons/Settings';
+import PublicIcon from '@material-ui/icons/Public';
+import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
 import HomeIcon from '@material-ui/icons/Home';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
@@ -60,15 +60,15 @@ const Header = () => {
                         <div className={classes.sectionDesktop}>
                             <Link to={Routes.PROFILE} className={classes.activeLink}>
                                 <IconButton color="inherit">
-                                    <PeopleIcon />
+                                    <AccessibilityNewIcon />
                                 </IconButton>
                             </Link>
                             <Link to={Routes.NEWS} className={classes.activeLink}>
                                 <IconButton color="inherit">
-                                    <SettingsIcon />
+                                    <PublicIcon />
                                 </IconButton>
                             </Link>
-                            <Link to={Routes.INDEX} className={classes.activeLink}>
+                            <Link to={Routes.CATEGORIES} className={classes.activeLink}>
                                 <IconButton color="inherit">
                                     <NotificationsIcon />
                                 </IconButton>

@@ -8,10 +8,13 @@ import {
     Row,
     Column,
     Profile,
-    Home
+    Home,
+    News
 } from '../../components';
 
 import CategoriesStyles from './CategoriesStyles';
+import Routes from "../../constants/routes";
+import {Route, Switch} from "react-router-dom";
 
 const useStyles = makeStyles(CategoriesStyles);
 
@@ -21,13 +24,16 @@ const Categories = () => {
 
     return (
         <>
-            {/*<Header />*/}
+            <Header />
             <Container maxWidth={false}>
                 <Row>
                     <Column className={classes.content}>
-                        {/*<Home />*/}
-                        {/*<Profile />*/}
-                    </Column>
+                        <Switch>
+                            <Route exact path={Routes.NEWS} component={News} />
+                            <Route exact path={Routes.PROFILE} component={Profile} />
+                            <Route exact path={Routes.HOME} component={Home} />
+                        </Switch>
+                        </Column>
                 </Row>
             </Container>
         </>
