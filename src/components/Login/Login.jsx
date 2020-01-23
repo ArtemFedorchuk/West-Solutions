@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useFormik } from 'formik';
 
 import {
     Button,
@@ -18,7 +17,7 @@ import LoginStyles from './LoginStyles';
 
 const useStyles = makeStyles(LoginStyles);
 
-const Login = ({ ...rest}) => {
+const Login = ({focusHandler, ...rest}) => {
     const classes = useStyles();
 
     return (
@@ -40,7 +39,8 @@ const Login = ({ ...rest}) => {
                             autoComplete="name"
                             autoFocus
                             placeholder="Enter user name"
-                            onChange={rest.updateUserHandler}
+                            onFocus={focusHandler}
+                            // onChange={rest.updateUserHandler}
                             // onChange={e => console.log('name => ', e.currentTarget.value)}
                         />
                         <TextField
@@ -53,7 +53,7 @@ const Login = ({ ...rest}) => {
                             id="password"
                             autoComplete="current-password"
                             placeholder="Enter password"
-                            onChange={rest.updateUserHandler}
+                            // onChange={rest.updateUserHandler}
                             // onChange={e => console.log('password => ', e.currentTarget.value)}
                         />
                         <Button

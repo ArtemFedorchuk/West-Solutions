@@ -38,7 +38,6 @@ const News = (props) => {
                     {news ?
                         news.map((items, i) => (
                             <div key={i} className={classes.newsWrapper}>
-                                {console.log(items)}
                                <h4>{items.title}</h4>
                                 <p>{items.description}</p><br/>
                                 <div>
